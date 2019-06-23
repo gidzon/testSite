@@ -4,7 +4,7 @@
 namespace App\Models;
 
 
-class Cart extends Model
+class Cart
 {
     public function addProduct($id)
     {
@@ -29,12 +29,10 @@ class Cart extends Model
 
 
 
-        $sum = new App\Models\Cart();
-        $amount = $this->countItems();
-        return $amount;
+        return self::countItems();
     }
 
-    public  function countItems()
+    public static function countItems()
     {
 
         if (isset($_SESSION['products'])) {

@@ -5,7 +5,7 @@ use Slim\Container;
 
 require_once dirname(__DIR__).'/vendor/autoload.php';
 
-session_start();
+
 
 $container = new Container([
     'settings' => require dirname(__DIR__).'/config/app.php',

@@ -11,6 +11,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <link href="../public/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <!--jQuery(necessary for Bootstrap's JavaScript plugins)-->
 <script src="../public/js/jquery-1.11.0.min.js"></script>
+
 <!--Custom-Theme-files-->
 <!--theme-style-->
 <link href="../public/css/style.css" rel="stylesheet" type="text/css" media="all" />
@@ -23,6 +24,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--start-menu-->
 <script src="../public/js/simpleCart.min.js"> </script>
 <link href="../public/css/memenu.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="../public/js/main.js"/>
 <script type="text/javascript" src="../public/js/memenu.js"></script>
 <script>$(document).ready(function(){$(".memenu").memenu();});</script>	
 <!--dropdown-->
@@ -351,8 +353,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<li><span>SKU</span>
 								<span class="women1">: CK09</span></li>
 							</ul>
+							<div class="quantity">
+								<input type="number" size="4" value="1" name="quantity" min="1" step="1">
+							</div>
 
-								<a href="#" class="add-cart item_add" data-id="{{ product.id }}">ADD TO CART</a>
+								<a href="#"   class="add-cart item_add" data-id="{{ product.id }}">ADD TO CART</a>
                             {% endfor %}
 							
 						</div>
@@ -568,15 +573,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 	<!--footer-end-->
 	<script>
-		$(document).ready(function(){
-			$(".add-cart").click(function () {
-				var id = $(this).attr("data-id");
-				$.get("/cart/add/"+id, {}, function (data) {
-					$(".simpleCart_total").html(data);
+			$(document).ready(function(){
+				$(" .add-cart").click(function () {
+					var id = $(this).attr("data-id");
+					$.post("/cart/add/"+id, {}, function (data) {
+						$(".simpleCart_total").html(data);
+
+					});
+
+					return false;
 				});
-				return false;
 			});
-		});
-	</script>
+		</script>
 </body>
 </html>

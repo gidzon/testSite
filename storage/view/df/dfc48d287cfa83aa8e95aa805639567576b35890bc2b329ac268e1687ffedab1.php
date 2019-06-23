@@ -47,6 +47,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <link href=\"../public/css/bootstrap.css\" rel=\"stylesheet\" type=\"text/css\" media=\"all\" />
 <!--jQuery(necessary for Bootstrap's JavaScript plugins)-->
 <script src=\"../public/js/jquery-1.11.0.min.js\"></script>
+
 <!--Custom-Theme-files-->
 <!--theme-style-->
 <link href=\"../public/css/style.css\" rel=\"stylesheet\" type=\"text/css\" media=\"all\" />
@@ -59,6 +60,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--start-menu-->
 <script src=\"../public/js/simpleCart.min.js\"> </script>
 <link href=\"../public/css/memenu.css\" rel=\"stylesheet\" type=\"text/css\" media=\"all\" />
+\t<link href=\"../public/js/main.js\"/>
 <script type=\"text/javascript\" src=\"../public/js/memenu.js\"></script>
 <script>\$(document).ready(function(){\$(\".memenu\").memenu();});</script>\t
 <!--dropdown-->
@@ -112,14 +114,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 \t\t\t\t\t</div>
 \t\t\t\t</div>
 \t\t\t\t";
-        // line 78
+        // line 80
         if (($context["sum"] ?? null)) {
-            // line 79
+            // line 81
             echo "\t\t\t\t\t";
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable(($context["sum"] ?? null));
             foreach ($context['_seq'] as $context["_key"] => $context["namber"]) {
-                // line 80
+                // line 82
                 echo "\t\t\t\t<div class=\"col-md-6 top-header-left\">
 \t\t\t\t\t<div class=\"cart box_1\">
 \t\t\t\t\t\t<a href=\"checkout.html\">
@@ -137,10 +139,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['namber'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 93
+            // line 95
             echo "\t\t\t\t";
         }
-        // line 94
+        // line 96
         echo "
 \t\t\t\t<div class=\"clearfix\"></div>
 \t\t\t</div>
@@ -325,19 +327,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 \t\t\t<div class=\"single-main\">
 \t\t\t\t<div class=\"col-md-9 single-main-left\">
                     ";
-        // line 277
+        // line 279
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["products"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["product"]) {
-            // line 278
+            // line 280
             echo "\t\t\t\t<div class=\"sngl-top\">
 \t\t\t\t\t<div class=\"col-md-5 single-top-left\">\t
 \t\t\t\t\t\t<div class=\"flexslider\">
 \t\t\t\t\t\t\t  <ul class=\"slides\">
 \t\t\t\t\t\t\t\t<li data-thumb=\"images/s-1.jpg\">
 \t\t\t\t\t\t\t\t\t<div class=\"thumb-image\"> <img src=\"";
-            // line 283
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["product"], "image", [], "any", false, false, false, 283), "html", null, true);
+            // line 285
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["product"], "image", [], "any", false, false, false, 285), "html", null, true);
             echo "\" data-imagezoom=\"true\" class=\"img-responsive\" alt=\"\"/> </div>
 \t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t<li data-thumb=\"images/s-2.jpg\">
@@ -366,8 +368,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 \t\t\t\t\t<div class=\"col-md-7 single-top-right\">
 \t\t\t\t\t\t<div class=\"single-para simpleCart_shelfItem\">
 \t\t\t\t\t\t<h2>";
-            // line 310
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["product"], "name", [], "any", false, false, false, 310), "html", null, true);
+            // line 312
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["product"], "name", [], "any", false, false, false, 312), "html", null, true);
             echo "</h2>
 \t\t\t\t\t\t\t<div class=\"star-on\">
 \t\t\t\t\t\t\t\t<ul class=\"star-footer\">
@@ -385,12 +387,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t
 \t\t\t\t\t\t\t<h5 class=\"item_price\">";
-            // line 326
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["product"], "price", [], "any", false, false, false, 326), "html", null, true);
+            // line 328
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["product"], "price", [], "any", false, false, false, 328), "html", null, true);
             echo "</h5>
 \t\t\t\t\t\t\t<p>";
-            // line 327
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["product"], "description", [], "any", false, false, false, 327), "html", null, true);
+            // line 329
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["product"], "description", [], "any", false, false, false, 329), "html", null, true);
             echo "</p>
 
 \t\t\t\t\t\t\t<div class=\"available\">
@@ -418,17 +420,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 \t\t\t\t\t\t\t\t<li><span>SKU</span>
 \t\t\t\t\t\t\t\t<span class=\"women1\">: CK09</span></li>
 \t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t\t<div class=\"quantity\">
+\t\t\t\t\t\t\t\t<input type=\"number\" size=\"4\" value=\"1\" name=\"quantity\" min=\"1\" step=\"1\">
+\t\t\t\t\t\t\t</div>
 
-\t\t\t\t\t\t\t\t<a href=\"#\" class=\"add-cart item_add\" data-id=\"";
-            // line 355
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["product"], "id", [], "any", false, false, false, 355), "html", null, true);
+\t\t\t\t\t\t\t\t<a href=\"#\"   class=\"add-cart item_add\" data-id=\"";
+            // line 360
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["product"], "id", [], "any", false, false, false, 360), "html", null, true);
             echo "\">ADD TO CART</a>
                             ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['product'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 357
+        // line 362
         echo "\t\t\t\t\t\t\t
 \t\t\t\t\t\t</div>
 \t\t\t\t\t</div>
@@ -476,25 +481,25 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 \t\t\t\t\t<div class=\"product-one\">
 \t\t\t\t\t\t<div class=\"col-md-4 product-left p-left\">
                             ";
-        // line 403
+        // line 408
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["productsSguidance"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["guidance"]) {
-            // line 404
+            // line 409
             echo "\t\t\t\t\t\t\t<div class=\"product-main simpleCart_shelfItem\">
 \t\t\t\t\t\t\t\t<a href=\"single/";
-            // line 405
+            // line 410
             echo twig_escape_filter($this->env, twig_var_dump($this->env, $context, ...[0 => $context["guidance"]]), "html", null, true);
             echo "\" class=\"mask\"><img class=\"img-responsive zoom-img\" src=\"../public/images/p-1.png\" alt=\"\" /></a>
 \t\t\t\t\t\t\t\t<div class=\"product-bottom\">
 \t\t\t\t\t\t\t\t\t<h3>";
-            // line 407
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["guidance"], "name", [], "any", false, false, false, 407), "html", null, true);
+            // line 412
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["guidance"], "name", [], "any", false, false, false, 412), "html", null, true);
             echo "</h3>
 \t\t\t\t\t\t\t\t\t<p>Explore Now</p>
 \t\t\t\t\t\t\t\t\t<h4><a class=\"item_add\" href=\"#\"><i></i></a> <span class=\" item_price\">";
-            // line 409
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["product"] ?? null), "price", [], "any", false, false, false, 409), "html", null, true);
+            // line 414
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["product"] ?? null), "price", [], "any", false, false, false, 414), "html", null, true);
             echo "</span></h4>
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t<div class=\"srch\">
@@ -507,7 +512,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['guidance'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 417
+        // line 422
         echo "
 \t\t\t\t\t\t<div class=\"clearfix\"></div>
 \t\t\t\t\t</div>
@@ -662,16 +667,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 \t</div>
 \t<!--footer-end-->
 \t<script>
-\t\t\$(document).ready(function(){
-\t\t\t\$(\".add-cart\").click(function () {
-\t\t\t\tvar id = \$(this).attr(\"data-id\");
-\t\t\t\t\$.get(\"/cart/add/\"+id, {}, function (data) {
-\t\t\t\t\t\$(\".simpleCart_total\").html(data);
+\t\t\t\$(document).ready(function(){
+\t\t\t\t\$(\" .add-cart\").click(function () {
+\t\t\t\t\tvar id = \$(this).attr(\"data-id\");
+\t\t\t\t\t\$.post(\"/cart/add/\"+id, {}, function (data) {
+\t\t\t\t\t\t\$(\".simpleCart_total\").html(data);
+
+\t\t\t\t\t});
+
+\t\t\t\t\treturn false;
 \t\t\t\t});
-\t\t\t\treturn false;
 \t\t\t});
-\t\t});
-\t</script>
+\t\t</script>
 </body>
 </html>";
     }
@@ -688,7 +695,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
     public function getDebugInfo()
     {
-        return array (  511 => 417,  497 => 409,  492 => 407,  487 => 405,  484 => 404,  480 => 403,  432 => 357,  424 => 355,  393 => 327,  389 => 326,  370 => 310,  340 => 283,  333 => 278,  329 => 277,  144 => 94,  141 => 93,  123 => 80,  118 => 79,  116 => 78,  37 => 1,);
+        return array (  516 => 422,  502 => 414,  497 => 412,  492 => 410,  489 => 409,  485 => 408,  437 => 362,  429 => 360,  395 => 329,  391 => 328,  372 => 312,  342 => 285,  335 => 280,  331 => 279,  146 => 96,  143 => 95,  125 => 82,  120 => 81,  118 => 80,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -706,6 +713,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <link href=\"../public/css/bootstrap.css\" rel=\"stylesheet\" type=\"text/css\" media=\"all\" />
 <!--jQuery(necessary for Bootstrap's JavaScript plugins)-->
 <script src=\"../public/js/jquery-1.11.0.min.js\"></script>
+
 <!--Custom-Theme-files-->
 <!--theme-style-->
 <link href=\"../public/css/style.css\" rel=\"stylesheet\" type=\"text/css\" media=\"all\" />
@@ -718,6 +726,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--start-menu-->
 <script src=\"../public/js/simpleCart.min.js\"> </script>
 <link href=\"../public/css/memenu.css\" rel=\"stylesheet\" type=\"text/css\" media=\"all\" />
+\t<link href=\"../public/js/main.js\"/>
 <script type=\"text/javascript\" src=\"../public/js/memenu.js\"></script>
 <script>\$(document).ready(function(){\$(\".memenu\").memenu();});</script>\t
 <!--dropdown-->
@@ -1046,8 +1055,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 \t\t\t\t\t\t\t\t<li><span>SKU</span>
 \t\t\t\t\t\t\t\t<span class=\"women1\">: CK09</span></li>
 \t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t\t<div class=\"quantity\">
+\t\t\t\t\t\t\t\t<input type=\"number\" size=\"4\" value=\"1\" name=\"quantity\" min=\"1\" step=\"1\">
+\t\t\t\t\t\t\t</div>
 
-\t\t\t\t\t\t\t\t<a href=\"#\" class=\"add-cart item_add\" data-id=\"{{ product.id }}\">ADD TO CART</a>
+\t\t\t\t\t\t\t\t<a href=\"#\"   class=\"add-cart item_add\" data-id=\"{{ product.id }}\">ADD TO CART</a>
                             {% endfor %}
 \t\t\t\t\t\t\t
 \t\t\t\t\t\t</div>
@@ -1263,16 +1275,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 \t</div>
 \t<!--footer-end-->
 \t<script>
-\t\t\$(document).ready(function(){
-\t\t\t\$(\".add-cart\").click(function () {
-\t\t\t\tvar id = \$(this).attr(\"data-id\");
-\t\t\t\t\$.get(\"/cart/add/\"+id, {}, function (data) {
-\t\t\t\t\t\$(\".simpleCart_total\").html(data);
+\t\t\t\$(document).ready(function(){
+\t\t\t\t\$(\" .add-cart\").click(function () {
+\t\t\t\t\tvar id = \$(this).attr(\"data-id\");
+\t\t\t\t\t\$.post(\"/cart/add/\"+id, {}, function (data) {
+\t\t\t\t\t\t\$(\".simpleCart_total\").html(data);
+
+\t\t\t\t\t});
+
+\t\t\t\t\treturn false;
 \t\t\t\t});
-\t\t\t\treturn false;
 \t\t\t});
-\t\t});
-\t</script>
+\t\t</script>
 </body>
 </html>", "single.twig", "W:\\domains\\testSite\\view\\single.twig");
     }

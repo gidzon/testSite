@@ -11,7 +11,7 @@ class Product extends Model
 
     public function getLatestProducts($columns = '*')
     {
-//    $this->pdo->prepare('SELECT * FROM  goods WHERE status = "?" ORDER BY id DESC LIMIT 6');
+
         if (is_array($columns)) {
             $columns = implode(',', $columns);
         }

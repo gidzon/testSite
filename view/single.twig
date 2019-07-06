@@ -10,7 +10,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <title>Luxury Watches A Ecommerce Category Flat Bootstarp Resposive Website Template | Single :: w3layouts</title>
 <link href="../public/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <!--jQuery(necessary for Bootstrap's JavaScript plugins)-->
-<script src="../public/js/jquery-1.11.0.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
 <!--Custom-Theme-files-->
 <!--theme-style-->
@@ -22,9 +22,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!--start-menu-->
-<script src="../public/js/simpleCart.min.js"> </script>
+
+<javascript type="text/javascript" src="../public/js/main.js"></javascript>
 <link href="../public/css/memenu.css" rel="stylesheet" type="text/css" media="all" />
-	<link href="../public/js/main.js"/>
+	
 <script type="text/javascript" src="../public/js/memenu.js"></script>
 <script>$(document).ready(function(){$(".memenu").memenu();});</script>	
 <!--dropdown-->
@@ -77,8 +78,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="clearfix"></div>
 					</div>
 				</div>
-				{% if sum %}
-					{% for namber in sum %}
+
 				<div class="col-md-6 top-header-left">
 					<div class="cart box_1">
 						<a href="checkout.html">
@@ -91,8 +91,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="clearfix"> </div>
 					</div>
 				</div>
-					{% endfor %}
-				{% endif %}
+
 
 				<div class="clearfix"></div>
 			</div>
@@ -281,8 +280,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="col-md-5 single-top-left">	
 						<div class="flexslider">
 							  <ul class="slides">
-								<li data-thumb="images/s-1.jpg">
-									<div class="thumb-image"> <img src="{{product.image }}" data-imagezoom="true" class="img-responsive" alt=""/> </div>
+								<li data-thumb="{{product.image}}">
+									<div class="thumb-image"> <img src="{{product.image}}" data-imagezoom="true" class="img-responsive" alt=""/> </div>
 								</li>
 								<li data-thumb="images/s-2.jpg">
 									 <div class="thumb-image"> <img src="../public/images/s-2.jpg" data-imagezoom="true" class="img-responsive" alt=""/> </div>
@@ -357,6 +356,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<input type="number" size="4" value="1" name="quantity" min="1" step="1">
 							</div>
 
+							(<span id="cart-count">{{ sum }}</span>)
+
+
 								<a href="#"   class="add-cart item_add" data-id="{{ product.id }}">ADD TO CART</a>
                             {% endfor %}
 							
@@ -405,11 +407,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="latestproducts">
 					<div class="product-one">
 						<div class="col-md-4 product-left p-left">
-                            {% for guidance in productsSguidance %}
+
 							<div class="product-main simpleCart_shelfItem">
-								<a href="single/{{dump(guidance)  }}" class="mask"><img class="img-responsive zoom-img" src="../public/images/p-1.png" alt="" /></a>
+								<a href="single/" class="mask"><img class="img-responsive zoom-img" src="../public/images/p-1.png" alt="" /></a>
 								<div class="product-bottom">
-									<h3>{{ guidance.name }}</h3>
+									<h3></h3>
 									<p>Explore Now</p>
 									<h4><a class="item_add" href="#"><i></i></a> <span class=" item_price">{{ product.price }}</span></h4>
 								</div>
@@ -418,7 +420,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								</div>
 							</div>
 						</div>
-                        {% endfor %}
+
 
 						<div class="clearfix"></div>
 					</div>
@@ -572,18 +574,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 	</div>
 	<!--footer-end-->
-	<script>
-			$(document).ready(function(){
-				$(" .add-cart").click(function () {
-					var id = $(this).attr("data-id");
-					$.post("/cart/add/"+id, {}, function (data) {
-						$(".simpleCart_total").html(data);
+{#	<script>#}
+{#			$(document).ready(function(){#}
+{#				$(" .add-cart").click(function () {#}
+{#					var id = $(this).attr("data-id");#}
+{#					$.post("/cart/add/"+id, {}, function (data) {#}
+{#						$("#cart-count").html(data);#}
 
-					});
+{#					});#}
 
-					return false;
-				});
-			});
-		</script>
+{#					return false;#}
+{#				});#}
+{#			});#}
+{#		</script>#}
+<script src="../public/js/simpleCart.min.js"> </script>
+<script type="text/javascript" src="../public/js/main.js"></script>
 </body>
 </html>
